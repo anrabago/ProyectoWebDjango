@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+
+        {%include "superior/barra.html" %}
+        <p>esta es mi primera plantilla</p>
+
+
+        {% if nombre_persona == 'Antonio' %}
+            Pantilla creada por Antonio Garc&iacute;a
+        {% endif %}
+
+        <p>Mi nombre es {{nombre_persona}} {{apellido_persona}}</p>
+        <p>Los temas a tratar son {{temas}}</p>
+<!--        <p>El primer tema es {{temas.0}}</p>  -->
+        <p>Temas del Curso:</p>
+        <!-- Si la lista existe y además tiene información-->
+        {% if temas%}
+            <ul>
+                {% for elTema in temas %}
+                    <li>{{elTema}}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay elementos que mostrar</p>
+        {% endif %}
+    </body>
+</html>

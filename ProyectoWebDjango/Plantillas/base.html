@@ -1,0 +1,26 @@
+<html>
+
+<head>
+
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+
+</head>
+
+<body>
+
+    <h1>Titulo principal</h1>
+
+    <h3>Subtitula de la pagina</h3>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <p> Contenido de la plantilla base, que aparecerá en todas las hijas</p>
+
+</body>
+
+</html>
